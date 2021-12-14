@@ -6,4 +6,62 @@
     android:layout_height="match_parent"
     tools:context=".SearchActivity">
 
+    <LinearLayout
+        android:id="@+id/edtTextSearch"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <TextView
+            android:id="@+id/txtSearch"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:text="Search Movies"
+            android:textAlignment="center"
+            android:textSize="36sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/textView3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Search"
+            android:textSize="30sp" />
+
+        <EditText
+            android:id="@+id/editTxtSearch"
+            android:layout_width="328dp"
+            android:layout_height="75dp"
+            android:ems="10"
+            android:inputType="textPersonName"
+            android:textSize="24sp" />
+
+        <Button
+            android:id="@+id/btnLookup"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Lookup" />
+
+        <androidx.core.widget.NestedScrollView
+            android:layout_width="307dp"
+            android:layout_height="wrap_content"
+            android:fillViewport="true">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/resultsList"
+                    android:layout_width="310dp"
+                    android:layout_height="match_parent" />
+            </LinearLayout>
+        </androidx.core.widget.NestedScrollView>
+
+    </LinearLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -4,92 +4,87 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".EditMovies">
+    tools:context=".RegisterMovie">
 
     <TextView
-        android:id="@+id/editMovie"
+        android:id="@+id/registerMovie"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="126dp"
-        android:layout_marginTop="7dp"
-        android:text="Edit Movie"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="19dp"
+        android:text="Register Movie"
         android:textColor="@color/black"
         android:textSize="24sp"
         android:textStyle="bold"
-        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/edtTitle"
         app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
         android:id="@+id/titletxt"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="18dp"
-        android:layout_marginTop="80dp"
-        android:layout_marginEnd="18dp"
-        android:layout_marginBottom="80dp"
+        android:layout_marginStart="41dp"
         android:text="Title"
-        app:layout_constraintBottom_toBottomOf="@+id/txtYear"
-        app:layout_constraintEnd_toEndOf="@+id/txtReview"
-        app:layout_constraintStart_toStartOf="@+id/txtDirector"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintBaseline_toBaselineOf="@+id/edtTitle"
+        app:layout_constraintStart_toStartOf="parent" />
 
     <TextView
         android:id="@+id/txtDirector"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="32dp"
+        android:layout_marginTop="34dp"
         android:text="Director"
-        app:layout_constraintBaseline_toBaselineOf="@+id/edtDirector"
-        app:layout_constraintStart_toStartOf="parent" />
+        app:layout_constraintEnd_toEndOf="@+id/txtYear"
+        app:layout_constraintStart_toEndOf="@+id/txtYear"
+        app:layout_constraintTop_toBottomOf="@+id/txtYear" />
 
     <TextView
         android:id="@+id/txtActors"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="9dp"
-        android:layout_marginBottom="7dp"
+        android:layout_marginStart="33dp"
         android:text="Actors / Actresses"
-        app:layout_constraintBottom_toBottomOf="@+id/edtActors"
+        app:layout_constraintBaseline_toBaselineOf="@+id/edtActors"
         app:layout_constraintStart_toStartOf="parent" />
 
     <TextView
         android:id="@+id/txtRating"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="50dp"
-        android:layout_marginEnd="49dp"
+        android:layout_marginStart="35dp"
+        android:layout_marginBottom="33dp"
         android:text="Rating"
-        app:layout_constraintBaseline_toBaselineOf="@+id/edtRating"
-        app:layout_constraintEnd_toStartOf="@+id/edtRating"
+        app:layout_constraintBottom_toBottomOf="@+id/edtRating"
         app:layout_constraintStart_toStartOf="parent" />
 
     <TextView
         android:id="@+id/txtReview"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="48dp"
-        android:layout_marginBottom="136dp"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="11dp"
         android:text="Review"
-        app:layout_constraintBottom_toTopOf="@+id/btnUpdate"
-        app:layout_constraintStart_toStartOf="parent" />
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/edtRating" />
 
     <EditText
         android:id="@+id/edtTitle"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="13dp"
-        android:layout_marginTop="72dp"
+        android:layout_marginStart="84dp"
+        android:layout_marginTop="42dp"
+        android:layout_marginEnd="84dp"
         android:ems="10"
         android:inputType="textPersonName"
-        app:layout_constraintStart_toStartOf="@+id/editMovie"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/txtActors"
+        app:layout_constraintTop_toBottomOf="@+id/registerMovie" />
 
     <EditText
         android:id="@+id/edtYear"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="8dp"
-        android:layout_marginTop="32dp"
+        android:layout_marginTop="16dp"
         android:ems="4"
         android:inputType="number"
         app:layout_constraintStart_toStartOf="@+id/edtTitle"
@@ -99,18 +94,19 @@
         android:id="@+id/edtDirector"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="29dp"
+        android:layout_marginStart="4dp"
         android:ems="10"
         android:inputType="textPersonName"
-        app:layout_constraintStart_toStartOf="@+id/edtActors"
-        app:layout_constraintTop_toBottomOf="@+id/edtYear" />
+        app:layout_constraintBottom_toBottomOf="@+id/txtDirector"
+        app:layout_constraintStart_toStartOf="@+id/edtYear"
+        app:layout_constraintTop_toBottomOf="@+id/txtDirector" />
 
     <EditText
         android:id="@+id/edtActors"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="13dp"
-        android:layout_marginTop="28dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="42dp"
         android:ems="10"
         android:inputType="textPersonName"
         app:layout_constraintStart_toEndOf="@+id/txtActors"
@@ -120,64 +116,40 @@
         android:id="@+id/edtRating"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="24dp"
+        android:layout_marginTop="39dp"
+        android:layout_marginEnd="38dp"
         android:ems="10"
         android:inputType="textPersonName"
-        app:layout_constraintBottom_toTopOf="@+id/edtReview"
-        app:layout_constraintStart_toStartOf="@+id/edtActors" />
+        app:layout_constraintEnd_toEndOf="@+id/edtActors"
+        app:layout_constraintTop_toBottomOf="@+id/edtActors" />
 
     <EditText
         android:id="@+id/edtReview"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="8dp"
+        android:layout_marginTop="27dp"
         android:ems="10"
         android:inputType="textPersonName"
-        app:layout_constraintBaseline_toBaselineOf="@+id/txtReview"
-        app:layout_constraintStart_toStartOf="@+id/edtRating" />
+        app:layout_constraintStart_toStartOf="@+id/edtRating"
+        app:layout_constraintTop_toBottomOf="@+id/edtRating" />
 
     <TextView
         android:id="@+id/txtYear"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="48dp"
-        android:layout_marginBottom="68dp"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="43dp"
         android:text="Year"
-        app:layout_constraintBottom_toTopOf="@+id/txtDirector"
-        app:layout_constraintStart_toStartOf="parent" />
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/titletxt" />
 
     <Button
         android:id="@+id/btnUpdate"
-        android:layout_width="0dp"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="68dp"
+        android:layout_marginTop="70dp"
         android:text="Update"
-        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="1.0"
-        app:layout_constraintStart_toStartOf="parent" />
-
-    <TextView
-        android:id="@+id/txtFav"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="7dp"
-        android:layout_marginEnd="15dp"
-        android:text="Favourite"
-        app:layout_constraintEnd_toStartOf="@+id/editTextFav"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/editTextFav" />
-
-    <EditText
-        android:id="@+id/editTextFav"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="39dp"
-        android:layout_marginEnd="23dp"
-        android:ems="10"
-        android:inputType="textPersonName"
-        android:text="edtFav"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/txtFav"
         app:layout_constraintTop_toBottomOf="@+id/edtReview" />
 </androidx.constraintlayout.widget.ConstraintLayout>
