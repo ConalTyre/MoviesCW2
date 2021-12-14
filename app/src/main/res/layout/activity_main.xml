@@ -17,7 +17,7 @@
         app:layout_constraintTop_toBottomOf="@+id/btnFavourite" />
 
     <Button
-        android:id="@+id/btnSearch"
+        android:id="@+id/btnLookup"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="35dp"
@@ -76,5 +76,5 @@
         android:text="Ratings"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/btnSearch" />
+        app:layout_constraintTop_toBottomOf="@+id/btnLookup" />
 </androidx.constraintlayout.widget.ConstraintLayout>

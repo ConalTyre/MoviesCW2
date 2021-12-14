@@ -1,3 +1,6 @@
 <resources>
     <string name="app_name">Movies CW2</string>
+    <string name="back4app_app_id">1Up7ZGY0nB74kvrusFdTDiMLuJK5IzKdfTpcgDNR</string>
+    <string name="back4app_client_key">QwNgJ5hgi9AnnF0yDh3uR9I86DA7DboCohxvftbW</string>
+    <string name="back4app_server_url">https://parseapi.back4app.com</string>
 </resources>
